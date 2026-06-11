@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IndoAm Foods — Southern California's Indian Grocery Distributor</title>
+<meta name="description" content="IndoAm Foods distributes authentic Indian ethnic food brands to grocery stores and retailers across Southern California. From port to pantry." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23ff8a1e'/><rect x='4' y='4' width='3' height='3' fill='white'/><rect x='9' y='4' width='3' height='3' fill='white'/><rect x='4' y='9' width='8' height='3' fill='white'/></svg>" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-orbits">
+      <span class="orbit o1"></span>
+      <span class="orbit o2"></span>
+      <span class="orbit o3"></span>
+      <svg class="loader-mark" viewBox="0 0 48 48" width="64" height="64">
+        <g fill="#e2641c">
+          <rect x="2"  y="20" width="16" height="8" rx="1"/>
+          <polygon points="18,12 18,36 30,24"/>
+          <rect x="33" y="8"  width="7" height="7" class="px p1"/>
+          <rect x="38" y="20" width="7" height="7" class="px p2"/>
+          <rect x="33" y="33" width="7" height="7" class="px p3"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== Fixed header ===== -->
+  <header class="site-header">
+    <a class="wordmark" href="#top">INDO<span>AM</span></a>
+    <button class="menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== WebGL canvas (fixed, behind everything) ===== -->
+  <canvas id="webgl"></canvas>
+
+  <!-- ===== Scroll space: hero + 3D journey ===== -->
+  <div id="scroll-space">
+
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h1>From Port<br>to Pantry,<br>Perfected</h1>
+        <p class="hero-sub">Southern California's distributor of authentic Indian
+        food brands. We move the flavors of home from the docks to grocery
+        shelves — fresh, compliant, and always on time.</p>
+      </div>
+      <a class="scroll-hint" href="#journey">SCROLL TO FOLLOW THE JOURNEY</a>
+    </section>
+
+    <section id="journey" aria-label="Our distribution process">
+      <div id="process-ui">
+        <ol class="steps">
+          <li class="step" data-step="0">
+            <span class="num">01</span>
+            <div class="step-body">
+              <h3>Sourced at the source</h3>
+              <div class="step-text-wrap"><p>Containers of India's most trusted
+              brands — rice, dals, masalas, snacks and sweets — arrive weekly at
+              the Ports of Los Angeles and Long Beach through our direct import
+              partnerships. No middlemen, no markup stacking.</p></div>
+            </div>
+          </li>
+          <li class="step" data-step="1">
+            <span class="num">02</span>
+            <div class="step-body">
+              <h3>Checked &amp; warehoused</h3>
+              <div class="step-text-wrap"><p>Every lot clears FDA-compliant
+              inspection at our distribution center. Date codes, labeling and
+              cold-chain items are verified before a single case is released —
+              so what reaches your shelf is exactly what your customers expect.</p></div>
+            </div>
+          </li>
+          <li class="step" data-step="2">
+            <span class="num">03</span>
+            <div class="step-body">
+              <h3>Routed across SoCal</h3>
+              <div class="step-text-wrap"><p>Our own fleet runs scheduled routes
+              from San Diego to Ventura County. Standing orders, next-day
+              fill-ins, and real-time delivery windows keep your backroom lean
+              and your planogram full.</p></div>
+            </div>
+          </li>
+          <li class="step" data-step="3">
+            <span class="num">04</span>
+            <div class="step-body">
+              <h3>On shelves, on time</h3>
+              <div class="step-text-wrap"><p>We don't just drop pallets. Our reps
+              help with merchandising, rotation and reorders, tracking sell-through
+              so the brands your shoppers love never go out of stock.</p></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== Content sections (scroll over the canvas) ===== -->
+  <main class="content">
+
+    <section class="features">
+      <h2>Built for today's grocery retail, beyond legacy distribution.</h2>
+
+      <div class="feature">
+        <svg class="feature-icon" viewBox="0 0 96 96" aria-hidden="true">
+          <g fill="none" stroke="#12121f" stroke-width="5" stroke-linejoin="round">
+            <path d="M16 38 48 22l32 16-32 16z" fill="#12121f"/>
+            <path d="M16 38v22l32 16V54z" fill="#fff"/>
+            <path d="M80 38v22L48 76V54z" fill="#12121f"/>
+          </g>
+        </svg>
+        <h3>Authentic Brand Portfolio</h3>
+        <p>We carry the labels Indian households actually ask for — basmati and
+        sona masoori, dals and atta, pickles, papad, frozen breads, chai and
+        snacks — sourced directly from the brands that made them famous.</p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature-icon" viewBox="0 0 96 96" aria-hidden="true">
+          <g fill="none" stroke="#12121f" stroke-width="5" stroke-linejoin="round">
+            <path d="M14 60h44V36H26z" fill="#12121f"/>
+            <path d="M58 44h14l10 8v8H58z" fill="#fff"/>
+            <circle cx="30" cy="66" r="7" fill="#fff"/>
+            <circle cx="68" cy="66" r="7" fill="#fff"/>
+            <path d="M20 28h28M28 20h28" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <h3>Reliable Fulfillment</h3>
+        <p>98%+ fill rates, scheduled route days, and next-day coverage across
+        Southern California. Our logistics are built so an empty shelf is never
+        the reason a customer walks out.</p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature-icon" viewBox="0 0 96 96" aria-hidden="true">
+          <g fill="none" stroke="#12121f" stroke-width="5" stroke-linejoin="round">
+            <path d="M18 76V44l16-12 16 12v32" fill="#12121f"/>
+            <path d="M50 76V44l14-10 14 10v32" fill="#fff"/>
+            <path d="M12 76h74" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <h3>Retail Partnership</h3>
+        <p>From independent ethnic markets to regional supermarket chains, we
+        bring category data, planogram help and launch support — a partner at
+        the shelf, not just a vendor at the dock.</p>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <div class="showcase-art" role="img" aria-label="Illustration of Indian grocery products">
+        <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="360" fill="#f4e3cf"/>
+          <rect x="40" y="250" width="520" height="14" rx="6" fill="#caa06a"/>
+          <rect x="40" y="120" width="520" height="10" rx="5" fill="#caa06a"/>
+          <!-- top shelf jars -->
+          <g>
+            <rect x="70"  y="56" width="52" height="64" rx="8" fill="#e2641c"/>
+            <rect x="78"  y="48" width="36" height="12" rx="4" fill="#8a3d12"/>
+            <rect x="78"  y="78" width="36" height="26" rx="3" fill="#fff7ec"/>
+            <rect x="150" y="64" width="46" height="56" rx="8" fill="#1c7a4b"/>
+            <rect x="157" y="56" width="32" height="12" rx="4" fill="#0e4a2c"/>
+            <rect x="157" y="84" width="32" height="22" rx="3" fill="#fff7ec"/>
+            <rect x="224" y="50" width="58" height="70" rx="8" fill="#c2342a"/>
+            <rect x="233" y="42" width="40" height="12" rx="4" fill="#7e1d16"/>
+            <rect x="233" y="76" width="40" height="28" rx="3" fill="#fff7ec"/>
+            <rect x="312" y="62" width="48" height="58" rx="8" fill="#d9930f"/>
+            <rect x="320" y="54" width="32" height="12" rx="4" fill="#8f5e05"/>
+            <rect x="320" y="86" width="32" height="22" rx="3" fill="#fff7ec"/>
+            <rect x="390" y="52" width="62" height="68" rx="8" fill="#345b9c"/>
+            <rect x="400" y="44" width="42" height="12" rx="4" fill="#1d3a6e"/>
+            <rect x="400" y="80" width="42" height="26" rx="3" fill="#fff7ec"/>
+            <rect x="480" y="60" width="50" height="60" rx="8" fill="#e2641c"/>
+            <rect x="488" y="52" width="34" height="12" rx="4" fill="#8a3d12"/>
+            <rect x="488" y="88" width="34" height="20" rx="3" fill="#fff7ec"/>
+          </g>
+          <!-- bottom shelf sacks & boxes -->
+          <g>
+            <path d="M70 250c0-40 18-66 45-66s45 26 45 66z" fill="#dcb27c"/>
+            <rect x="92" y="206" width="46" height="22" rx="4" fill="#fff7ec"/>
+            <path d="M188 250c0-36 16-60 41-60s41 24 41 60z" fill="#c98f4e"/>
+            <rect x="206" y="212" width="46" height="20" rx="4" fill="#fff7ec"/>
+            <rect x="296" y="178" width="84" height="72" rx="6" fill="#c2342a"/>
+            <rect x="308" y="194" width="60" height="24" rx="4" fill="#fff7ec"/>
+            <rect x="398" y="192" width="70" height="58" rx="6" fill="#1c7a4b"/>
+            <rect x="408" y="206" width="50" height="20" rx="4" fill="#fff7ec"/>
+            <rect x="484" y="184" width="56" height="66" rx="6" fill="#d9930f"/>
+            <rect x="492" y="200" width="40" height="22" rx="4" fill="#fff7ec"/>
+          </g>
+          <!-- spice bowls front -->
+          <g>
+            <ellipse cx="150" cy="318" rx="58" ry="20" fill="#8a3d12"/>
+            <ellipse cx="150" cy="310" rx="50" ry="16" fill="#e2641c"/>
+            <ellipse cx="300" cy="320" rx="58" ry="20" fill="#5a1d12"/>
+            <ellipse cx="300" cy="312" rx="50" ry="16" fill="#c2342a"/>
+            <ellipse cx="450" cy="318" rx="58" ry="20" fill="#6e5407"/>
+            <ellipse cx="450" cy="310" rx="50" ry="16" fill="#d9930f"/>
+          </g>
+        </svg>
+      </div>
+      <h2>Authentic flavors. Supermarket standards.</h2>
+      <p>Ethnic food shouldn't mean unpredictable supply. We run our portfolio of
+      Indian brands with the same compliance, traceability and service levels you
+      expect from national distributors — across every store we serve.</p>
+      <ul class="cats">
+        <li>Rice &amp; Grains</li><li>Dals &amp; Flours</li><li>Spices &amp; Masalas</li>
+        <li>Snacks &amp; Sweets</li><li>Frozen &amp; Chilled</li><li>Beverages</li>
+      </ul>
+      <a class="btn-dark" href="#contact">EXPLORE OUR BRANDS</a>
+    </section>
+
+    <section class="faq">
+      <h2>How we work</h2>
+
+      <details class="faq-item" open>
+        <summary>How fast can my store get its first delivery?<span class="chev"></span></summary>
+        <div class="faq-body"><p>Most new retail partners receive their opening
+        order within one week of onboarding. Once you're on a route, standing
+        orders arrive on scheduled days with next-day fill-ins available across
+        Los Angeles, Orange County, the Inland Empire and San Diego.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What brands and categories do you carry?<span class="chev"></span></summary>
+        <div class="faq-body"><p>Our catalog spans the full Indian grocery basket:
+        basmati and regional rice, dals and lentils, atta and specialty flours,
+        spices and masala blends, pickles and chutneys, ready-to-eat meals,
+        frozen breads and snacks, sweets, and beverages — from India's most
+        recognized labels.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you support stores new to Indian groceries?<span class="chev"></span></summary>
+        <div class="faq-body"><p>Yes. We help mainstream and specialty retailers
+        build an Indian set from scratch — recommended assortments by store
+        demographic, planograms, intro pricing and demo support, so the category
+        earns its shelf space from week one.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is your coverage area?<span class="chev"></span></summary>
+        <div class="faq-body"><p>We deliver throughout Southern California —
+        from Ventura and the San Fernando Valley down through Los Angeles,
+        Orange County, the Inland Empire and San Diego — with our own trucks
+        and drivers on every route.</p></div>
+      </details>
+    </section>
+
+    <section id="contact" class="cta">
+      <h2>Stock the flavors your customers come back for.</h2>
+      <p>Join the grocery stores and retailers across Southern California who
+      trust IndoAm Foods to keep their Indian set full, fresh and moving.</p>
+      <a class="btn-light" href="mailto:sales@indoamfoods.com">BECOME A RETAIL PARTNER</a>
+      <footer>
+        <span class="wordmark small">INDO<span>AM</span> FOODS</span>
+        <span>Southern California · Est. family-owned</span>
+        <span>© 2026 IndoAm Foods. All rights reserved.</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
